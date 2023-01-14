@@ -24,7 +24,7 @@ Now that you have the code downloaded, I should probably explain what it does an
   I will admit C/C++ is hard.<br> Memory Management, no thanks. Call by value or call by Reference, Why would I know. 
   Start with something simple like Java (python is dog water) that probably won't age well. 
   Anyway, it is much easier to learn the fundamentals of OOP in a simpler language than to jump head first into arduino, a C++/C weird hybrid.
-  I understand that doesn't help you because odds are you don't have time to *Learn Java*. You need to code what ever the hell the instructor wants you to do **NOW**.
+  I understand that doesn't help you because odds are you don't have time to *Learn Java*. You need to code whatever heck the instructor wants you to do **NOW**.
   In that case....
   1. [BOOM](https://www.tutorialspoint.com/arduino/index.htm)
   2. [BANG](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink)
