@@ -1,6 +1,6 @@
 # whs_robotic_designlab
 
-Okay. I am bad at writing, so you will soon find out, but here are the somewhat cohesive instructions for using this code.
+Okay. I am bad at writing, grammar, and spelling. This is why I am a programmer. No one cares if you spell a varaible wrong as long as you spell it wrong *constantly*. On that note, here are the somewhat cohesive instructions for using this code.
 
 ## First:
 Clone the repo.
