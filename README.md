@@ -21,7 +21,7 @@ Now that you have the code downloaded, I should probably explain what it does an
   ## Forth
   I realized this isn't a list and just a place for me to dump random information. If you're still reading, Thanks!
   Here is a quick tip that will give you and edge. Learn on Object Oriented Programming Language(OOP).
-  I will admit C/C++ is hard. Memory Management, no thanks. Call by value or call by Reference, Why would I know. 
+  I will admit C/C++ is hard.<br> Memory Management, no thanks. Call by value or call by Reference, Why would I know. 
   Start with something simple like Java (python is dog water) that probably won't age well. 
   Anyway, it is much easier to learn the fundamentals of OOP in a simpler language than to jump head first into arduino, a C++/C weird hybrid.
   I understand that doesn't help you because odds are you don't have time to *Learn Java*. You need to code what ever the hell the instructor wants you to do **NOW**.
