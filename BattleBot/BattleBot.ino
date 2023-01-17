@@ -6,7 +6,7 @@
 // Generial Motor
 #define MOTOR_PULSE 700
 #define ENC_MOTOR_MIN_RPM 60
-#define ENC_MOTOR_MIN_RPM 255
+#define ENC_MOTOR_MAX_RPM 255
 //MOTOR 1
 #define M1_INP1 7
 #define M1_INP2 8
@@ -64,16 +64,7 @@ void setup() {
   spinner.setup();
   linearActulator.setup();
   driveTrain.setup();
-  buttonSetup();
-
-  attachInterrupt(digitalPinToInterrupt(M1_ENB1), pulseMotor1, RISING);
-  attachInterrupt(digitalPinToInterrupt(M2_ENB1), pulseMotor2, RISING);
-  attachInterrupt(digitalPinToInterrupt(M3_ENB1), pulseMotor3, RISING);
-  attachInterrupt(digitalPinToInterrupt(M4_ENB1), pulseMotor4, RISING);
-}
-
-// format of ps2.addButtonFunction is: hey WHEN this keep is pressed, you should EXECUTE this code
-void buttonSetup(){
+  // format of ps2.addButtonFunction is: hey WHEN this keep is pressed, you should EXECUTE this code
   ps2.addButtonFunction(PSB_RED,[](){
     driveTrain.toggleState();
     spinner.toggleState();
@@ -91,6 +82,11 @@ void buttonSetup(){
       tankDrive = false;
     }else {tankDrive = true;}
   });
+
+  attachInterrupt(digitalPinToInterrupt(M1_ENB1), pulseMotor1, RISING);
+  attachInterrupt(digitalPinToInterrupt(M2_ENB1), pulseMotor2, RISING);
+  attachInterrupt(digitalPinToInterrupt(M3_ENB1), pulseMotor3, RISING);
+  attachInterrupt(digitalPinToInterrupt(M4_ENB1), pulseMotor4, RISING);
 }
 
 
@@ -112,7 +108,7 @@ void loop() {
     // Normal tank drive where leftStick controls left Motors and right Stick Controls left Motors
     int leftSpeed =  analogToSpeed(lStick.y);
     int rightSpeed =  analogToSpeed(rStick.y);
-    packet = motorPacketof(leftSpeed,rightSpeed,leftSpeed,rightSpeed);
+    packet = motorPacketOf(leftSpeed,rightSpeed,leftSpeed,rightSpeed);
   }
   // Update object after recieving new data
   driveTrain.update(packet);
@@ -145,12 +141,13 @@ MotorPacket motorPacketOf(int spd1,int spd2,int spd3,int spd4){
   packet.motor2Speed = spd2;
   packet.motor3Speed = spd3;
   packet.motor4Speed = spd4;
+  return packet;
 }
 
 // takes and analog input(0-255) and maps to a value between the encodedMotor min and max rpm(60-200)
 int analogToSpeed(int value){
   int vel = abs(value-128);
-  int fin = vel == 0 ? 0 : map(vel,0,255,ENC_MOTOR_MIN_RPM,ENC_MOTOR_MIN_RPM);
+  int fin = vel == 0 ? 0 : map(vel,0,255,ENC_MOTOR_MIN_RPM,ENC_MOTOR_MAX_RPM);
   fin *= value < 128 ? 1 : -1;
   return fin;
 }
