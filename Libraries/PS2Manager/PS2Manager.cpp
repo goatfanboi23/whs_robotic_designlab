@@ -2,15 +2,8 @@
 #include "PS2Manager.h"
 #include <util/atomic.h>
 #include <PS2X_lib.h>
+#include <VectorUtils.h>
 
-// opperator for comparing two Vector structs
-bool operator ==(const Vector& v1, const Vector& v2){ 
-  return v1.x == v2.x && v1.y == v2.y;
-}
-// opperator for comparing two Vector structs
-bool operator !=(const Vector& v1, const Vector& v2){
-  return v1.x != v2.x || v1.y != v2.y;
-}
 
 PS2Manager::PS2Manager(uint16_t pin1,uint16_t pin2, uint16_t pin3, uint16_t pin4) {
     this->ps2Inp1 = pin1;

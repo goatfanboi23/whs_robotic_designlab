@@ -3,6 +3,7 @@
 #include "Arduino.h"
 #include <PS2X_lib.h>
 #include <util/atomic.h>
+#include <VectorUtils.h>
 
 // empty function used for lamdas
 typedef void (*buttonFunction)();
@@ -12,12 +13,6 @@ typedef struct {
   uint16_t button;
   buttonFunction function;
 } ButtonMap;
-
-// custom vector struct
-typedef struct {
-  int x;
-  int y;
-} Vector;
 
 
 class PS2Manager {
@@ -37,7 +32,7 @@ public:
     PS2X getPS2X() const;
 
 private:
-    ButtonMap bm[16];
+    ButtonMap bm[32];
     //previus vector of the left analog stick
     Vector currentLeftStick;
     Vector currentRightStick;
