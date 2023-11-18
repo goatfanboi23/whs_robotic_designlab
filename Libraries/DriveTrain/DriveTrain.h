@@ -2,12 +2,8 @@
 #define DriveTrain_h
 #include "Arduino.h"
 #include "EncodedMotor.h"
-typedef struct {
-  int motor1Speed;
-  int motor2Speed;
-  int motor3Speed;
-  int motor4Speed;
-} MotorPacket;
+#include "MotorPacket.h"
+
 class DriveTrain {
 public:
     DriveTrain(EncodedMotor m1,EncodedMotor m2,EncodedMotor m3,EncodedMotor m4);

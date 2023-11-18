@@ -135,14 +135,14 @@ void pulseMotor4(){
 // ==========================================================================================================
 //              Utility Functions (Should I put them in a corrisponding class? Yes. do I care? No.)
 // ==========================================================================================================
-MotorPacket motorPacketOf(int spd1,int spd2,int spd3,int spd4){
-  MotorPacket packet;
-  packet.motor1Speed = spd1;
-  packet.motor2Speed = spd2;
-  packet.motor3Speed = spd3;
-  packet.motor4Speed = spd4;
-  return packet;
-}
+//MotorPacket motorPacketOf(int spd1,int spd2,int spd3,int spd4){
+//  MotorPacket packet;
+//  packet.motor1Speed = spd1;
+//  packet.motor2Speed = spd2;
+//  packet.motor3Speed = spd3;
+//  packet.motor4Speed = spd4;
+//  return packet;
+//}
 
 // takes and analog input(0-255) and maps to a value between the encodedMotor min and max rpm(60-200)
 int analogToSpeed(int value){

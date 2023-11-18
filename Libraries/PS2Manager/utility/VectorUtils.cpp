@@ -1,6 +1,5 @@
 #include "Arduino.h"
 #include "VectorUtils.h"
-#include "Arduino.h"
 
 // operator for comparing two Vector structs
 bool operator ==(const Vector& v1, const Vector& v2){
