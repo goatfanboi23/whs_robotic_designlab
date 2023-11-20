@@ -15,7 +15,6 @@ private:
     int motor2Speed;
     int motor3Speed;
     int motor4Speed;
-
 };
 
 #endif
