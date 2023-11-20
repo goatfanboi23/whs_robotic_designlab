@@ -1,0 +1,33 @@
+#######################################
+# Syntax Coloring Map PS2X
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+PS2Manager	KEYWORD1
+Vector      KEYWORD1
+ButtonMap   KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+Button	             KEYWORD2
+setup	             KEYWORD2
+update	             KEYWORD2
+addButtonFunction    KEYWORD2
+setFuncAtButtonIndex KEYWORD2
+getButtonIndex	     KEYWORD2
+updateStickValues	 KEYWORD2
+updateButtonState	 KEYWORD2
+getCurrentLeftStick	 KEYWORD2
+getCurrentRightStick KEYWORD2
+getPastLeftStick	 KEYWORD2
+getPastRightStick    KEYWORD2
+getPS2X              KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+

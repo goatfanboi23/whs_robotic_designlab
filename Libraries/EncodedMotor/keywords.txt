@@ -1,0 +1,33 @@
+#######################################
+# Syntax Coloring Map PS2X
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+EncodedMotor	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+setup	     KEYWORD2
+pulse	     KEYWORD2
+update	     KEYWORD2
+move	     KEYWORD2
+stop	     KEYWORD2
+setSpeed	 KEYWORD2
+getSpeed	 KEYWORD2
+getDirection KEYWORD2
+getRPM	     KEYWORD2
+setTargetDir KEYWORD2
+getEncoderA	 KEYWORD2
+toggleState	 KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+rpm_to_radians	LITERAL1
+rad_to_deg	LITERAL1
+interval	LITERAL1
+

@@ -4,6 +4,10 @@
 #include <PS2X_lib.h>
 #include <VectorUtils.h>
 
+struct ButtonMap {
+    uint16_t button;
+    buttonFunction function;
+}
 
 PS2Manager::PS2Manager(uint16_t pin1,uint16_t pin2, uint16_t pin3, uint16_t pin4) {
     this->ps2Inp1 = pin1;

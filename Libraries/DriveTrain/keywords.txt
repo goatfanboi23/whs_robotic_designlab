@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map PS2X
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DriveTrain	KEYWORD1
+MotorPacket	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+setup	     KEYWORD2
+toggleState	     KEYWORD2
+update	     KEYWORD2
+stop	     KEYWORD2
+getSpd1	     KEYWORD2
+getSpd2	     KEYWORD2
+getSpd3	     KEYWORD2
+getSpd4	     KEYWORD2
+
+
