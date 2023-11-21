@@ -10,12 +10,12 @@ void DriveTrain::setup(){
     this->stop();
 }
 void DriveTrain::update(MotorPacket packet){
-    this->motor1.setSpeed(packet.motor1Speed);
-    this->motor2.setSpeed(packet.motor2Speed);   
-    this->motor3.setSpeed(packet.motor3Speed);
-    this->motor4.setSpeed(packet.motor4Speed);    
+    this->motor1.setSpeed(packet.getSpd1());
+    this->motor2.setSpeed(packet.getSpd2());
+    this->motor3.setSpeed(packet.getSpd3());
+    this->motor4.setSpeed(packet.getSpd4());
 
-    if(packet.motor1Speed == 0 && packet.motor2Speed == 0 &&packet.motor3Speed == 0 && packet.motor4Speed == 0){
+    if(packet.getSpd1() == 0 && packet.getSpd2() == 0 &&packet.getSpd3() == 0 && packet.getSpd4() == 0){
         stop();
     } else {
         this->motor1.move();

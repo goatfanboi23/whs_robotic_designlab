@@ -2,5 +2,9 @@
 #define VectorUtils_h
 #include "Arduino.h"
 // custom vector struct
-typedef struct Vector Vector;
+typedef struct {
+	int x;
+    int y;
+} Vector;
+
 #endif

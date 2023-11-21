@@ -10,7 +10,10 @@ typedef void (*buttonFunction)();
 
 // key value pair for buttons and desired function
 
-typedef struct ButtonMap ButtonMap;
+typedef struct {
+    uint16_t button;
+    buttonFunction function;
+} ButtonMap;
 
 class PS2Manager {
 public:
