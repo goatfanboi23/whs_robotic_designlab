@@ -5,7 +5,7 @@
 #define PS2_INP2 10
 #define PS2_INP3 9
 #define PS2_INP4 11
-
+PS2Manager ps2 = PS2Manager(PS2_INP1,PS2_INP2,PS2_INP3,PS2_INP4);
 // called once at the start of the program
 void setup() {
     Serial.begin(9600);
